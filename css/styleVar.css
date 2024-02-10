@@ -1,0 +1,145 @@
+:root {
+    --rx: 0;
+    --ry: 0;
+    --rz: 0;
+
+    --tx: 0;
+    --ty: 0;
+    --tz: 0;
+}
+
+.t-inherit {
+    --tx: inherit;
+    --ty: inherit;
+    --tz: inherit;
+}
+
+.r-inherit {
+    --rx: inherit;
+    --ry: inherit;
+    --rz: inherit;
+}
+
+.t-clear {
+    --tx: 0;
+    --ty: 0;
+    --tz: 0;
+}
+
+.r-clear {
+    --rx: 0;
+    --ry: 0;
+    --rz: 0;
+}
+
+.sides-container {
+    --rx: 0;
+    --ry: 0;
+    --rz: 0;
+    
+    --tx: 0;
+    --ty: 0;
+    --tz: 0;
+}
+
+.top {
+    --tx: 0;
+    --ty: 0;
+    --tz: 1;
+
+    --rx: 1;
+    --ry: 0;
+    --rz: 0;
+}
+
+.front {
+    --tx: 0;
+    --ty: 0;
+    --tz: 1;
+
+    --rx: 0;
+    --ry: 0;
+    --rz: 0;
+}
+
+.right {
+    --tx: 0;
+    --ty: 0;
+    --tz: 1;
+
+    --rx: 0;
+    --ry: 1;
+    --rz: 0;
+}
+
+.back {
+    --tx: 0;
+    --ty: 0;
+    --tz: 1;
+
+    --rx: 0;
+    --ry: 2;
+    --rz: 0;
+}
+
+.left {
+    --tx: 0;
+    --ty: 0;
+    --tz: 1;
+
+    --rx: 0;
+    --ry: 3;
+    --rz: 0;
+}
+
+.bottom {
+    --tx: 0;
+    --ty: 0;
+    --tz: 1;
+
+    --rx: -1;
+    --ry: 0;
+    --rz: 0;
+}
+
+.tx-inherit {--tx: inherit}
+.tx-clear {--tx: 0}
+.tposx-1 {--tx: 1}
+.tposx-2 {--tx: 2}
+.tposx-3 {--tx: 3}
+.tposx-4 {--tx: 4}
+.tposx-5 {--tx: 5}
+
+.tnegx-1 {--tx: -1}
+.tnegx-2 {--tx: -2}
+.tnegx-3 {--tx: -3}
+.tnegx-4 {--tx: -4}
+.tnegx-5 {--tx: -5}
+
+.ty-inherit {--ty: inherit}
+.ty-clear {--ty: 0}
+.tposy-1 {--ty: 1}
+.tposy-2 {--ty: 2}
+.tposy-3 {--ty: 3}
+.tposy-4 {--ty: 4}
+.tposy-5 {--ty: 5}
+
+.tnegy-1 {--ty: -1}
+.tnegy-2 {--ty: -2}
+.tnegy-3 {--ty: -3}
+.tnegy-4 {--ty: -4}
+.tnegy-5 {--ty: -5}
+
+.tz-inherit {--tz: inherit}
+.tz-clear {--tz: 0}
+.tposz-1 {--tz: 1}
+.tposz-2 {--tz: 2}
+.tposz-3 {--tz: 3}
+.tposz-4 {--tz: 4}
+.tposz-5 {--tz: 5}
+
+.tnegz-1 {--tz: -1}
+.tnegz-2 {--tz: -2}
+.tnegz-3 {--tz: -3}
+.tnegz-4 {--tz: -4}
+.tnegz-5 {--tz: -5}
