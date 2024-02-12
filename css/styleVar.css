@@ -1,4 +1,9 @@
 :root {
+    --voxel-dims: 160px;
+    --voxel-scale: 0.5;
+    --voxel: calc(var(--voxel-dims) * var(--voxel-scale));
+    --half-voxel: calc(var(--voxel) / 2);
+    
     --rx: 0;
     --ry: 0;
     --rz: 0;
@@ -6,30 +11,6 @@
     --tx: 0;
     --ty: 0;
     --tz: 0;
-}
-
-.t-inherit {
-    --tx: inherit;
-    --ty: inherit;
-    --tz: inherit;
-}
-
-.r-inherit {
-    --rx: inherit;
-    --ry: inherit;
-    --rz: inherit;
-}
-
-.t-clear {
-    --tx: 0;
-    --ty: 0;
-    --tz: 0;
-}
-
-.r-clear {
-    --rx: 0;
-    --ry: 0;
-    --rz: 0;
 }
 
 .sides-container {
@@ -47,7 +28,7 @@
     --ty: 0;
     --tz: 1;
 
-    --rx: 1;
+    --rx: 0.25;
     --ry: 0;
     --rz: 0;
 }
@@ -68,7 +49,7 @@
     --tz: 1;
 
     --rx: 0;
-    --ry: 1;
+    --ry: 0.25;
     --rz: 0;
 }
 
@@ -78,7 +59,7 @@
     --tz: 1;
 
     --rx: 0;
-    --ry: 2;
+    --ry: 0.5;
     --rz: 0;
 }
 
@@ -88,7 +69,7 @@
     --tz: 1;
 
     --rx: 0;
-    --ry: 3;
+    --ry: 0.75;
     --rz: 0;
 }
 
@@ -97,49 +78,145 @@
     --ty: 0;
     --tz: 1;
 
-    --rx: -1;
+    --rx: -0.25;
     --ry: 0;
     --rz: 0;
 }
 
-.tx-inherit {--tx: inherit}
-.tx-clear {--tx: 0}
-.tposx-1 {--tx: 1}
-.tposx-2 {--tx: 2}
-.tposx-3 {--tx: 3}
-.tposx-4 {--tx: 4}
-.tposx-5 {--tx: 5}
+.inherit-translation {
+    --tx: inherit;
+    --ty: inherit;
+    --tz: inherit;
+}
 
-.tnegx-1 {--tx: -1}
-.tnegx-2 {--tx: -2}
-.tnegx-3 {--tx: -3}
-.tnegx-4 {--tx: -4}
-.tnegx-5 {--tx: -5}
+.clear-translation {
+    --tx: 0;
+    --ty: 0;
+    --tz: 0;
+}
 
-.ty-inherit {--ty: inherit}
-.ty-clear {--ty: 0}
-.tposy-1 {--ty: 1}
-.tposy-2 {--ty: 2}
-.tposy-3 {--ty: 3}
-.tposy-4 {--ty: 4}
-.tposy-5 {--ty: 5}
+.inherit-x-translation {--tx: inherit}
 
-.tnegy-1 {--ty: -1}
-.tnegy-2 {--ty: -2}
-.tnegy-3 {--ty: -3}
-.tnegy-4 {--ty: -4}
-.tnegy-5 {--ty: -5}
+.translate-pos-x-1 {--tx: 1}
+.translate-pos-x-2 {--tx: 2}
+.translate-pos-x-3 {--tx: 3}
+.translate-pos-x-4 {--tx: 4}
+.translate-pos-x-5 {--tx: 5}
 
-.tz-inherit {--tz: inherit}
-.tz-clear {--tz: 0}
-.tposz-1 {--tz: 1}
-.tposz-2 {--tz: 2}
-.tposz-3 {--tz: 3}
-.tposz-4 {--tz: 4}
-.tposz-5 {--tz: 5}
+.clear-x-translation {--tx: 0}
 
-.tnegz-1 {--tz: -1}
-.tnegz-2 {--tz: -2}
-.tnegz-3 {--tz: -3}
-.tnegz-4 {--tz: -4}
-.tnegz-5 {--tz: -5}
+.translate-neg-x-1 {--tx: -1}
+.translate-neg-x-2 {--tx: -2}
+.translate-neg-x-3 {--tx: -3}
+.translate-neg-x-4 {--tx: -4}
+.translate-neg-x-5 {--tx: -5}
+
+.inherit-y-translation {--ty: inherit}
+
+.translate-pos-y-1 {--ty: 1}
+.translate-pos-y-2 {--ty: 2}
+.translate-pos-y-3 {--ty: 3}
+.translate-pos-y-4 {--ty: 4}
+.translate-pos-y-5 {--ty: 5}
+
+.clear-y-translation {--ty: 0}
+
+.translate-neg-y-1 {--ty: -1}
+.translate-neg-y-2 {--ty: -2}
+.translate-neg-y-3 {--ty: -3}
+.translate-neg-y-4 {--ty: -4}
+.translate-neg-y-5 {--ty: -5}
+
+.inherit-z-translation {--tz: inherit}
+
+.translate-pos-z-1 {--tz: 1}
+.translate-pos-z-2 {--tz: 2}
+.translate-pos-z-3 {--tz: 3}
+.translate-pos-z-4 {--tz: 4}
+.translate-pos-z-5 {--tz: 5}
+
+.clear-z-translation {--tz: 0}
+
+.translate-neg-z-1 {--tz: -1}
+.translate-neg-z-2 {--tz: -2}
+.translate-neg-z-3 {--tz: -3}
+.translate-neg-z-4 {--tz: -4}
+.translate-neg-z-5 {--tz: -5}
+
+.inherit-rotation {
+    --rx: inherit;
+    --ry: inherit;
+    --rz: inherit;
+}
+
+.clear-rotation {
+    --rx: 0;
+    --ry: 0;
+    --rz: 0;
+}
+
+.inherit-x-rotation {--rx: inherit}
+
+.rotate-pos-x-45 {--rx: 0.125}
+.rotate-pos-x-90 {--rx: 0.25}
+.rotate-pos-x-135 {--rx: 0.375}
+.rotate-pos-x-180 {--rx: 0.5}
+.rotate-pos-x-225 {--rx: 0.625}
+.rotate-pos-x-270 {--rx: 0.75}
+.rotate-pos-x-315 {--rx: 0.875}
+.rotate-pos-x-360 {--rx: 1}
+
+.clear-x-rotation {--rx: 0}
+
+.rotate-neg-x-45 {--rx: -0.125}
+.rotate-neg-x-90 {--rx: -0.25}
+.rotate-neg-x-135 {--rx: -0.375}
+.rotate-neg-x-180 {--rx: -0.5}
+.rotate-neg-x-225 {--rx: -0.625}
+.rotate-neg-x-270 {--rx: -0.75}
+.rotate-neg-x-315 {--rx: -0.875}
+.rotate-neg-x-360 {--rx: -1}
+
+.inherit-y-rotation {--ry: inherit}
+
+.rotate-pos-y-45 {--ry: 0.125}
+.rotate-pos-y-90 {--ry: 0.25}
+.rotate-pos-y-135 {--ry: 0.375}
+.rotate-pos-y-180 {--ry: 0.5}
+.rotate-pos-y-225 {--ry: 0.625}
+.rotate-pos-y-270 {--ry: 0.75}
+.rotate-pos-y-315 {--ry: 0.875}
+.rotate-pos-y-360 {--ry: 1}
+
+.clear-y-rotation {--ry: 0}
+
+.rotate-neg-y-45 {--ry: -0.125}
+.rotate-neg-y-90 {--ry: -0.25}
+.rotate-neg-y-135 {--ry: -0.375}
+.rotate-neg-y-180 {--ry: -0.5}
+.rotate-neg-y-225 {--ry: -0.625}
+.rotate-neg-y-270 {--ry: -0.75}
+.rotate-neg-y-315 {--ry: -0.875}
+.rotate-neg-y-360 {--ry: -1}
+
+.inherit-z-rotation {--rz: inherit}
+
+.rotate-pos-z-45 {--rz: 0.125}
+.rotate-pos-z-90 {--rz: 0.25}
+.rotate-pos-z-135 {--rz: 0.375}
+.rotate-pos-z-180 {--rz: 0.5}
+.rotate-pos-z-225 {--rz: 0.625}
+.rotate-pos-z-270 {--rz: 0.75}
+.rotate-pos-z-315 {--rz: 0.875}
+.rotate-pos-z-360 {--rz: 1}
+
+.clear-z-rotation {--rz: 0}
+
+.rotate-neg-z-45 {--rz: -0.125}
+.rotate-neg-z-90 {--rz: -0.25}
+.rotate-neg-z-135 {--rz: -0.375}
+.rotate-neg-z-180 {--rz: -0.5}
+.rotate-neg-z-225 {--rz: -0.625}
+.rotate-neg-z-270 {--rz: -0.75}
+.rotate-neg-z-315 {--rz: -0.875}
+.rotate-neg-z-360 {--rz: -1}
