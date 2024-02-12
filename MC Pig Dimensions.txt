@@ -1,0 +1,5 @@
+MC Pig Dimensions
+
+Length - 1.2545 voxels
+Height - 1.1875 voxels
+Width - 0.625 voxels
