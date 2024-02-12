@@ -1,0 +1,7 @@
+div {
+    transition: all 3s ease;
+}
+
+.voxel:hover{
+    transform: rotateX(calc(var(--rx) * 360deg)) rotateY(calc(var(--ry) * 360deg));
+}
