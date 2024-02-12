@@ -1,0 +1,44 @@
+.voxel-island, .voxel-island div {
+    width: var(--voxel);
+    height: var(--voxel);
+}
+
+.voxel .side {
+    width: var(--voxel);
+    height: var(--voxel);
+    
+    transform:
+        rotateX(calc(var(--rx) * 360deg)) rotateY(calc(var(--ry) * 360deg)) rotateZ(calc(var(--rz) * 360deg)) translate3d(calc(var(--tx) * var(--half-voxel)),
+            calc(var(--ty) * var(--half-voxel)),
+            calc(var(--tz) * var(--half-voxel)));
+}
+
+.grass-block .side {
+    background: url(/img/blocks/grass_block/grass_block_side.png);
+    background-size: contain;
+
+    &.top {
+        background: url(/img/blocks/grass_block/grass_block_top.png);
+        background-size: contain;
+    }
+
+    &.bottom {
+        background: url(/img/blocks/dirt/dirt.png);
+        background-size: contain;
+    }
+}
+
+.oak-log .side {
+    background: url(/img/blocks/oak_tree/oak_log/oak_log_side.png);
+    background-size: contain;
+
+    &.top {
+        background: url(/img/blocks/oak_tree/oak_log/oak_log_top.png);
+        background-size: contain;
+    }
+}
+
+.oak-leaves .side {
+    background: url(/img/blocks/oak_tree/oak_leaves/oak_leaves.png);
+    background-size: contain;
+}
